@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vmin;
+  background-color: black;
+}
+#container {
+  margin: 10vmin;
+  font-size: 20vmin;
+  display: grid;
+  grid-template-columns: 25vmin 25vmin 25vmin;
+  grid-template-rows: 25vmin 25vmin 25vmin;
+  color: red;
+  grid-gap: 1vmin;
+  text-align: center;
+  justify-content: center;
+
+  
+}
+
+div {
+  background-color: white;
+  color: green;
+/*   border: solid; */
+  margin: 0;
+  border-radius: 5px
+
+}
+
+
+ {
+  
+  
+  
+
+  
+    
+    
+
+}
