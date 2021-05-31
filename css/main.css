@@ -8,8 +8,14 @@ body {
   height: 100vmin;
   background-color: black;
 }
+
+h1 { 
+  color: white;
+  text-align: center;
+  
+}
 #container {
-  margin: 10vmin;
+  margin: 0;
   font-size: 20vmin;
   display: grid;
   grid-template-columns: 25vmin 25vmin 25vmin;
@@ -31,14 +37,18 @@ div {
 
 }
 
-
- {
-  
-  
-  
-
-  
-    
-    
-
+#player1-clicked {
+  background-color: blue;
 }
+
+
+ 
+  
+  
+  
+
+  
+    
+    
+
+
