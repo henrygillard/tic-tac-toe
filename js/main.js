@@ -43,11 +43,12 @@ function init() {
 }
 function render() {
     gameBoard.forEach(function(square, idx) {
+        
         squareEl[idx].style.background = SQUARE_FILL[square]
      if (winner === "T") {
          headerEl.innerHTML = "Tie Game!";
      } else if (winner){
-        headerEl.innerHTML = `${SQUARE_FILL[player].toUpperCase()} Wins!`;
+        headerEl.innerHTML = `${SQUARE_FILL[player *= -1].toUpperCase()} Wins!`;
 
      } else {
     headerEl.innerHTML = `${SQUARE_FILL[player].toUpperCase()}'s turn`    
