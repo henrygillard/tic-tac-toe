@@ -2,7 +2,7 @@
 const SQUARE_FILL = {
     "1": "red",
     "-1": "blue",
-    "null": "white"
+    "null": "#5C606B"
 };
     
 
@@ -32,11 +32,11 @@ const headerEl = document.querySelector("h1");
 
 /*----- event listeners -----*/
 document.querySelector("section").addEventListener("click", fillSelection);
-
+document.querySelector("button").addEventListener("click", init)
 /*----- functions -----*/
 init();
 function init() {
-    gameBoard = [null, null, null, null, null, null, null, null];
+    gameBoard = [null, null, null, null, null, null, null, null, null];
     player = 1; // game starts with player 1 then set to -1.
     winner = null; // set to 1, -1, T (for tie) or null;
     render();
@@ -60,8 +60,6 @@ function render() {
 
 function fillSelection(evt) {
    if (evt.target.tagName != "DIV") return;
-   
-    
    const idx = evt.target.id.replace("grid-box", "")
    // check if square is available and return if not
    if (gameBoard[idx] || winner) return;
@@ -69,17 +67,15 @@ function fillSelection(evt) {
    gameBoard[idx] = player;
    player *= -1;
    winner = getWinner();
-console.log(idx)
-console.log(player)
-console.log(gameBoard);
    render();
  }
 
  function getWinner() {
      for(i=0; i< WIN.length; i ++) {
-        if (Math.abs(gameBoard[WIN[i][0]] + gameBoard[WIN[i][1]] + gameBoard[WIN[i][2]]) === 3) return gameBoard[WIN[i][0]];
+        if (Math.abs(gameBoard[WIN[i][0]] + gameBoard[WIN[i][1]] + gameBoard[WIN[i][2]]) === 3) 
+        return gameBoard[WIN[i][0]];
          
-     };
+     }
      if (gameBoard.includes(null)) return null;
      return "T";
  }

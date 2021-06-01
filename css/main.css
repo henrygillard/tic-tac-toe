@@ -1,20 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Sigmar One', cursive;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   height: 100vmin;
+  background-image: url("https://thumbs.dreamstime.com/b/x-o-background-seamless-pattern-68583854.jpg");
   background-color: black;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 h1 { 
-  color: white;
+  font-family: 'Sigmar One', cursive;
+  color: black;
   text-align: center;
+  font-size: 65px;
   
 }
 #container {
+  opacity: 70%;
   margin: 0;
   font-size: 20vmin;
   display: grid;
@@ -37,8 +48,14 @@ div {
 
 }
 
-#player1-clicked {
-  background-color: blue;
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+ 
+  
+  
 }
 
 
